@@ -5,15 +5,15 @@ import (
 )
 
 type RestErr struct {
-	Message string   `json: "message"`
-	Err     string   `json: "error"`
-	Code    int      `json: "code"`
-	Causes  []Causes `json: "causes"`
+	Message string   `json:"message"`
+	Err     string   `json:"error"`
+	Code    int      `json:"code"`
+	Causes  []Causes `json:"causes"`
 }
 
 type Causes struct {
-	Field   string `json: "field"`
-	Message string `json: "message"`
+	Field   string `json:"field"`
+	Message string `json:"message"`
 }
 
 func (r *RestErr) Error() string {
